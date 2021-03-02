@@ -59,4 +59,4 @@ test_image /= 255
 test_image = np.expand_dims(test_image, axis = 0)
 
 predicted = classifier.predict(test_image)
-predicted = 'dog' if predicted > 0.5 else 'cat'
+predicted = 'dog' if predicted < 0.5 else 'cat'
